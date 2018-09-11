@@ -1,0 +1,28 @@
+.body_container {
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.hide {
+  display: none;
+}
+
+.file_upload_area {
+  min-height: 200px;
+  width: 100%;
+  background: #d4d4d4;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.image_tag {
+  width: 150px;
+  height: 150px;
+  margin: 20px;
+  border-radius: 15px;
+}
+
+.pull-right {
+  float: right;
+}

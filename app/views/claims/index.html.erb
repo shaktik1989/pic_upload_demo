@@ -1,0 +1,28 @@
+<div class="col-md-12">
+  <h2>
+    Claims List
+    <%=link_to "+ Add New Claim", new_claim_path(), class: "btn btn-success btn-sm pull-right" %>
+  </h2>
+  <br/>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @claims.each do |claim| %>
+        <tr>
+          <th scope="row"><%= claim.id %></th>
+          <td><%= claim.name %></td>
+          <td>
+            <%=link_to "Images", claim_images_path(claim.id), class: "btn btn-success btn-sm", method: :get %>
+            <%=link_to "Delete", claim_path(claim.id), method: :delete, class: "btn btn-danger btn-sm", data: {confirm: "Are you sure?"} %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
